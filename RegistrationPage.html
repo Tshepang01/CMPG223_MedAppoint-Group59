@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list"></ul>
+    </nav>
+
+    <div class="container">
+        <div class="register-box">
+            <h2>Register</h2>
+            <form id="registrationForm" action="RegisterUser.aspx" method="POST">
+
+                <div class="input-box">
+                    <input type="text" id="firstName" required>
+                    <label>First Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="lastName" required>
+                    <label>Last Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="contactNumber" onkeypress="return /[0-9]/i.test(event.key)" minlength="10" maxlength="10" required>
+                    <label>Contact Number</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" id="password" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.confirm_pswd.pattern = this.value;" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" id="confirmPassword" name="confirm_pswd" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <button id="btnRegister" type="submit" class="btn">Register</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

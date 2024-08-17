@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar">
+            <ul class="nav-list">
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="admin-container">
+                <h2>ADMINISTRATOR</h2>
+
+                <div class="input-box">
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" title="" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.confirm_pswd.pattern = this.value;" required>
+                    <label>Password</label>
+                </div>
+
+
+                <div><button type="submit" class="btn">Login</button> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</div>
+
+                <button type="button" class="btn" onclick="window.location.href='LogInPage.html';">Cancel</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
