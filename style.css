@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* Navigation bar styling */
+
 .navbar {
     background-color: #1f293a;
     overflow: hidden;
@@ -22,7 +22,7 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        justify-content: start;
     }
 
         .navbar .nav-list li {
@@ -39,14 +39,13 @@
             }
 
                 .navbar .nav-list li a:hover {
-                    background-color: #1f293a;
+                    background-color: #2c4766;
                     color: white;
                     text-align: center;
                 }
 
-/* Adjust the container to account for the fixed navbar */
 .container {
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 body {
