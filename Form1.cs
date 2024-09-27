@@ -1,87 +1,59 @@
-namespace Form1
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _1
 {
-    public partial class Form1 : Form
+    public partial class FormInvoice : Form
     {
-        public Form1()
+        public FormInvoice()
         {
             InitializeComponent();
+            LoadInvoiceData();
         }
 
-        private void btnBook_Click(object sender, EventArgs e)
+        private void LoadInvoiceData()
         {
-            AppointmentForm appointmentForm = new AppointmentForm();
-            appointmentForm.ShowDialog();
+            
+            dataGridViewInvoice.ColumnCount = 4;
+
+            
+            dataGridViewInvoice.Columns[0].Name = "Patient Name";
+            dataGridViewInvoice.Columns[1].Name = "Appointment Type";
+            dataGridViewInvoice.Columns[2].Name = "Doctor";
+            dataGridViewInvoice.Columns[3].Name = "Cash";
+
+            
+            string[] row1 = new string[] { "Lerato", "Consultation", "Dr. Smith", "R400" };
+            string[] row2 = new string[] { "Mosa Mpandlane", "Surgery", "Dr. Johnson", "R1500" };
+            string[] row3 = new string[] { "Tshepang", "Therapy", "Dr. Lee", "R300" };
+            string[] row4 = new string[] { "Tebogo", "Surgery", "Dr. Mukwevho", "R4500" };
+            string[] row5 = new string[] { "Refilwe", "Consultation", "Dr. Banda", "R450" };
+            string[] row6 = new string[] { "Inkosiyama2k", "Dentist", "Dr. Radebe", "R6000" };
+            string[] row7 = new string[] { "Sihle", "Therapy", "Dr. Naidoo", "R500" };
+
+            
+            dataGridViewInvoice.Rows.Add(row1);
+            dataGridViewInvoice.Rows.Add(row2);
+            dataGridViewInvoice.Rows.Add(row3);
+            dataGridViewInvoice.Rows.Add(row4);
+            dataGridViewInvoice.Rows.Add(row5);
+            dataGridViewInvoice.Rows.Add(row6);
+            dataGridViewInvoice.Rows.Add(row7);
+
+            
+            dataGridViewInvoice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            CancelAppointmentForm cancelAppointmentForm = new CancelAppointmentForm();
-            cancelAppointmentForm.ShowDialog();
-        }
-
-        private void btnRequest_Click(object sender, EventArgs e)
-        {
-            requestAmbulanceForm = new RequestAmbulanceForm();
-            requestAmbulanceForm.ShowDialog();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
-            string patientName = txtPatientName.Text;
-            string location = txtLocation.Text;
-            string reason = txtReason.Text;
-
-
-            MessageBox.Show("Ambulance request submitted:\n" +
-                            $"Patient Name: {patientName}\n" +
-                            $"Location: {location}\n" +
-                            $"Reason: {reason}");
-
-
-            InvoiceForm invoiceForm = new InvoiceForm();
-            invoiceForm.ShowDialog();
-
-
-            this.Close();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.Close();
-
-
-            HomePageForm homePageForm = new HomePageForm();
-            homePageForm.Show();
-        }
-
-        private void rbButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbManageProfile.Checked)
-            {
-                
-                LoginDetailsForm loginDetailsForm = new LoginDetailsForm();
-                loginDetailsForm.ShowDialog();
-            }
-        }
-
-        private void rbButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbLogout.Checked)
-            {
-                foreach (Form form in Application.OpenForms)
-                {
-                    form.Close();
-                }
-
-                Application.Exit();
-            }
         }
     }
 }

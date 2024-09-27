@@ -1,14 +1,14 @@
-﻿namespace Form1
+﻿namespace _1
 {
-    partial class Form1
+    partial class FormInvoice
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,185 +23,99 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            HomePage = new ListBox();
-            btnBook = new Button();
-            btnCancel = new Button();
-            btnRequest = new Button();
-            btnExit = new Button();
-            btnSave = new Button();
-            rbHome = new RadioButton();
-            rbLogout = new RadioButton();
-            rbManageProfile = new RadioButton();
-            SuspendLayout();
+            this.dataGridViewInvoice = new System.Windows.Forms.DataGridView();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewInvoice
+            // 
+            this.dataGridViewInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column0,
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridViewInvoice.Location = new System.Drawing.Point(-1, 37);
+            this.dataGridViewInvoice.Name = "dataGridViewInvoice";
+            this.dataGridViewInvoice.RowHeadersWidth = 51;
+            this.dataGridViewInvoice.RowTemplate.Height = 24;
+            this.dataGridViewInvoice.Size = new System.Drawing.Size(768, 366);
+            this.dataGridViewInvoice.TabIndex = 0;
+            // 
+            // Column0
+            // 
+            this.Column0.HeaderText = "Patient Name";
+            this.Column0.MinimumWidth = 6;
+            this.Column0.Name = "Column0";
+            this.Column0.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Appointment Type";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Doctor";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cash";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveCaption;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(20, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Home Page";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Invoice";
             // 
-            // HomePage
+            // FormInvoice
             // 
-            HomePage.FormattingEnabled = true;
-            HomePage.Location = new Point(226, 80);
-            HomePage.Name = "HomePage";
-            HomePage.Size = new Size(720, 464);
-            HomePage.TabIndex = 1;
-            // 
-            // btnBook
-            // 
-            btnBook.BackColor = SystemColors.ActiveCaption;
-            btnBook.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBook.ForeColor = SystemColors.ButtonFace;
-            btnBook.Location = new Point(468, 150);
-            btnBook.Name = "btnBook";
-            btnBook.Size = new Size(225, 63);
-            btnBook.TabIndex = 2;
-            btnBook.Text = "Book Appointment";
-            btnBook.UseVisualStyleBackColor = false;
-            btnBook.Click += btnBook_Click;
-            // 
-            // btnCancel
-            // 
-            btnCancel.BackColor = SystemColors.ActiveCaption;
-            btnCancel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.ForeColor = SystemColors.ButtonFace;
-            btnCancel.Location = new Point(468, 274);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(225, 67);
-            btnCancel.TabIndex = 3;
-            btnCancel.Text = "Cancel Appointment";
-            btnCancel.UseVisualStyleBackColor = false;
-            btnCancel.Click += btnCancel_Click;
-            // 
-            // btnRequest
-            // 
-            btnRequest.BackColor = SystemColors.ActiveCaption;
-            btnRequest.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRequest.ForeColor = SystemColors.ButtonFace;
-            btnRequest.Location = new Point(468, 412);
-            btnRequest.Name = "btnRequest";
-            btnRequest.Size = new Size(225, 63);
-            btnRequest.TabIndex = 4;
-            btnRequest.Text = "Request Ambulance";
-            btnRequest.UseVisualStyleBackColor = false;
-            btnRequest.Click += btnRequest_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = SystemColors.ActiveCaption;
-            btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExit.ForeColor = SystemColors.ButtonFace;
-            btnExit.Location = new Point(698, 567);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(205, 43);
-            btnExit.TabIndex = 5;
-            btnExit.Text = "Cancel";
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
-            // 
-            // btnSave
-            // 
-            btnSave.BackColor = SystemColors.ActiveCaption;
-            btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.ForeColor = SystemColors.ButtonFace;
-            btnSave.Location = new Point(262, 567);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(205, 43);
-            btnSave.TabIndex = 6;
-            btnSave.Text = "Save and Submit";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
-            // 
-            // rbHome
-            // 
-            rbHome.AutoSize = true;
-            rbHome.BackColor = SystemColors.ActiveCaption;
-            rbHome.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rbHome.ForeColor = SystemColors.ButtonFace;
-            rbHome.Location = new Point(1036, 29);
-            rbHome.Name = "rbHome";
-            rbHome.Size = new Size(72, 24);
-            rbHome.TabIndex = 7;
-            rbHome.TabStop = true;
-            rbHome.Text = "Home";
-            rbHome.UseVisualStyleBackColor = false;
-            rbHome.CheckedChanged += radioButton1_CheckedChanged;
-            // 
-            // rbLogout
-            // 
-            rbLogout.AutoSize = true;
-            rbLogout.BackColor = SystemColors.ActiveCaption;
-            rbLogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rbLogout.ForeColor = SystemColors.ButtonFace;
-            rbLogout.Location = new Point(1036, 59);
-            rbLogout.Name = "rbLogout";
-            rbLogout.Size = new Size(80, 24);
-            rbLogout.TabIndex = 8;
-            rbLogout.TabStop = true;
-            rbLogout.Text = "Logout";
-            rbLogout.UseVisualStyleBackColor = false;
-            rbLogout.CheckedChanged += rbButton2_CheckedChanged;
-            // 
-            // rbManageProfile
-            // 
-            rbManageProfile.AutoSize = true;
-            rbManageProfile.BackColor = SystemColors.ActiveCaption;
-            rbManageProfile.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rbManageProfile.ForeColor = SystemColors.ButtonFace;
-            rbManageProfile.Location = new Point(1036, -1);
-            rbManageProfile.Name = "rbManageProfile";
-            rbManageProfile.Size = new Size(136, 24);
-            rbManageProfile.TabIndex = 9;
-            rbManageProfile.TabStop = true;
-            rbManageProfile.Text = "Manage Profile";
-            rbManageProfile.UseVisualStyleBackColor = false;
-            rbManageProfile.CheckedChanged += radioButton3_CheckedChanged;
-            // 
-            // Form1
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1171, 658);
-            Controls.Add(rbManageProfile);
-            Controls.Add(rbLogout);
-            Controls.Add(rbHome);
-            Controls.Add(btnSave);
-            Controls.Add(btnExit);
-            Controls.Add(btnRequest);
-            Controls.Add(btnCancel);
-            Controls.Add(btnBook);
-            Controls.Add(HomePage);
-            Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1063, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewInvoice);
+            this.Name = "FormInvoice";
+            this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
-        private ListBox HomePage;
-        private Button btnBook;
-        private Button btnCancel;
-        private Button btnRequest;
-        private Button btnExit;
-        private Button btnSave;
-        private RadioButton rbHome;
-        private RadioButton rbLogout;
-        private RadioButton rbManageProfile;
+        private System.Windows.Forms.DataGridView dataGridViewInvoice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label1;
     }
 }
+
